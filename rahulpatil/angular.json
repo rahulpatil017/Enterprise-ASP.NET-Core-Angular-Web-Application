@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "rahulpatil"
+  "defaultProject": "rahulpatil",
+  "cli": {
+    "analytics": false
+  }
 }

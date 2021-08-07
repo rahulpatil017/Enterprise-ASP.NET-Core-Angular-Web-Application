@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using rahulpatil.ViewModels.HealthCheck;
 
 namespace rahulpatil
 {
@@ -27,7 +28,16 @@ namespace rahulpatil
                 configuration.RootPath = "rahulpatil/dist";
             });
 
-            services.AddHealthChecks();
+            services.AddHealthChecks()
+                .AddCheck("ICMP_01",
+                new ICMPHealthCheck("www.staysafe100.com",
+                100))
+                .AddCheck("ICMP_02",
+                new ICMPHealthCheck("www.google.com",
+                100))
+                .AddCheck("ICMP_03",
+                new ICMPHealthCheck("www.does-not-exist.com",
+                100));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,7 +75,7 @@ namespace rahulpatil
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapHealthChecks("/hc");
+                endpoints.MapHealthChecks("/hc", new CustomHealthCheckOptions());
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");

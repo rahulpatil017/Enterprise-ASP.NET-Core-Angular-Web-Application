@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace rahulpatil.Data.Models.WorldCities.Migrations
+namespace rahulpatil.Data.Migrations
 {
     public partial class Initial : Migration
     {

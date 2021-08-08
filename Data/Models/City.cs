@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace rahulpatil.Data.Models.WorldCities
+namespace rahulpatil.Data.Models
 {
     [Table("Cities")]
     public class City

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace rahulpatil.Data.Models.WorldCities
+namespace rahulpatil.Data.Models
 {
     public class ApplicationDbContext : DbContext
     {

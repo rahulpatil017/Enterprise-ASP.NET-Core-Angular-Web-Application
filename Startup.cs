@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using rahulpatil.Data.Models.WorldCities;
+using rahulpatil.Data.Models;
 using rahulpatil.ViewModels.HealthCheck;
 
 namespace rahulpatil

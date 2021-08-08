@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-healthcheck',
   templateUrl: './healthcheck.component.html',
-  styleUrls: ['./healthcheck.component.scss']
+  styleUrls: ['./healthcheck.component.css']
 })
 export class HealthcheckComponent implements OnInit {
 

@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using rahulpatil.Data.Models.WorldCities;
 using rahulpatil.ViewModels.HealthCheck;
 
 namespace rahulpatil
@@ -27,6 +29,13 @@ namespace rahulpatil
             {
                 configuration.RootPath = "rahulpatil/dist";
             });
+
+            // Add ApplicationDbContext and SQL Server support
+            services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(
+            Configuration.GetConnectionString("DefaultConnection")
+            )
+            );
 
             services.AddHealthChecks()
                 .AddCheck("ICMP_01",

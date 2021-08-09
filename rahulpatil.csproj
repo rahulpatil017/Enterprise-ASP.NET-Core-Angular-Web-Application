@@ -39,7 +39,13 @@
 
   <ItemGroup>
     <None Remove="rahulpatil\src\app\shared\models\City.ts" />
+    <None Remove="rahulpatil\src\app\shared\models\Country.ts" />
     <None Remove="rahulpatil\src\app\shared\modules\angular-material.module.ts" />
+    <None Remove="rahulpatil\tsconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="rahulpatil\tsconfig.json" />
   </ItemGroup>
 
   <ItemGroup>

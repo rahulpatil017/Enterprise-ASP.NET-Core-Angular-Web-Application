@@ -11,6 +11,7 @@ import { NavMenuComponent } from './modules/common/nav-menu/nav-menu.component';
 import { HomeComponent } from './modules/common/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './shared/modules/angular-material.module';
+import { CountriesComponent } from './modules/worldcities/pages/countries/countries.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AngularMaterialModule } from './shared/modules/angular-material.module'
     MainComponent,
     CitiesComponent,
     NavMenuComponent,
-    HomeComponent
+    HomeComponent,
+    CountriesComponent
   ],
   imports: [
     BrowserModule,

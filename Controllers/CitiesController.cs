@@ -43,6 +43,7 @@ namespace rahulpatil.Controllers
                     filterQuery);
         }
 
+
         // GET: api/Cities/5
         [HttpGet("{id}")]
         public async Task<ActionResult<City>> GetCity(int id)

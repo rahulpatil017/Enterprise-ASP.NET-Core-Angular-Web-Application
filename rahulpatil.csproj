@@ -22,7 +22,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.3.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.12" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,9 +38,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="rahulpatil\src\app\shared\models\City.ts" />
+    <None Remove="rahulpatil\src\app\shared\modules\angular-material.module.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="rahulpatil\src\app\core\" />
-    <Folder Include="rahulpatil\src\app\shared\" />
+    <Folder Include="rahulpatil\src\app\shared\directivies\" />
+    <Folder Include="rahulpatil\src\app\shared\pipes\" />
     <Folder Include="rahulpatil\src\assets\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="rahulpatil\src\app\shared\models\City.ts" />
   </ItemGroup>
 
   <ItemGroup>

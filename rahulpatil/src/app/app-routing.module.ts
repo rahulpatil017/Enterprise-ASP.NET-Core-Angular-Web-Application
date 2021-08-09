@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './common/main/main.component';
-import { HealthcheckComponent } from './modules/healthcheck/healthcheck.component';
+import { HomeComponent } from './modules/common/home/home.component';
+import { HealthcheckComponent } from './modules/healthcheck/pages/healthcheck.component';
+import { CitiesComponent } from './modules/worldcities/pages/cities/cities.component';
 
 const routes: Routes = [
-  { path: '', component: MainComponent, pathMatch: 'full' },
-  { path: 'healthcheck', component: HealthcheckComponent, pathMatch: 'full' },
-
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'healthcheck', component: HealthcheckComponent},
+  { path: 'cities', component: CitiesComponent }
 ];
 
 @NgModule({

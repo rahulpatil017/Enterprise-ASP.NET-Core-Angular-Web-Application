@@ -21,10 +21,26 @@ namespace rahulpatil.Controllers
         }
 
         // GET: api/Cities
+        // GET: api/Cities/?pageIndex=0&pageSize=10
+        // GET: api/Cities/?pageIndex=0&pageSize=10&sortColumn=name&sortOrder=asc
+        // GET: api/Cities/?pageIndex=0&pageSize=10&sortColumn=name&sortOrder=asc&filterColumn=name&filterQuery=york
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<City>>> GetCities()
+        public async Task<ActionResult<PaginationApiResult<City>>> GetCities(
+                int pageIndex = 0,
+                int pageSize = 10,
+                string sortColumn = null,
+                string sortOrder = null,
+                string filterColumn = null,
+                string filterQuery = null)
         {
-            return await _context.Cities.ToListAsync();
+            return await PaginationApiResult<City>.CreateAsync(
+                    _context.Cities,
+                    pageIndex,
+                    pageSize,
+                    sortColumn,
+                    sortOrder,
+                    filterColumn,
+                    filterQuery);
         }
 
         // GET: api/Cities/5
